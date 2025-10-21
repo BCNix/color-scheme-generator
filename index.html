@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Color Scheme Generator</title>
 </head>
 <body>
     <div class="body-inner">
         <header>
-            <div class="header-inner">
+            <form class="header-inner">
                 <input type="color" id="color" aria-label="Select color">
-                <div class="select-wrapper">
-                    <select id="mode" aria-label="Select color mode">
-                        <option>Monochrome</option>
-                        <option>SCHEME 1</option>
-                        <option>SCHEME 2</option>
-                    </select>
-                </div>
-                <button>Get color scheme</button>
-            </div>
+                <select id="select-mode" class="select-mode" aria-label="Select color mode">
+                        <button class="selected">
+                            <selectedcontent></selectedcontent>
+                        </button>
+                        <option value="monochrome">Monochrome</option>
+                        <option value="mode-1">Mode 1</option>
+                        <option value="mode-2">Mode 2</option>
+                </select>
+                <button class="get-scheme-btn">Get color scheme</button>
+            </form>
         </header>
         <main>
             <div class="main-inner">
