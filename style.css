@@ -1,3 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* box-sizing reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* end box-sizing reset */
+
+
+/* Layout */
+
 body{
     display: flex;
     justify-content: center;
@@ -14,13 +29,48 @@ body{
 }
 
 .header-inner{
+    padding: 23px 14px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    height: 90px;
     color: #D5D4D8;
     background-color: #1F2937;
+    gap: 11px;
 }
+
+.main-inner{
+    display: flex;
+}
+
+
+.main-items{
+    flex: 1 1 110px;
+}
+
+.color{
+    height: 414px;
+}
+
+.hexadec-color{
+    color: #D5D4D8;
+    background-color: #1F2937;
+    height: auto;
+    display: flex;
+}
+
+.hexadec-color p{
+    padding: 13px;
+    margin: auto auto;
+    word-break: break-word;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+}
+
+/* Input and Select */
 
 input[type="color"],
 select,
@@ -96,6 +146,8 @@ select,
   top: calc(anchor(bottom) + 3px);
 }
 
+/* Button */
+
 .get-scheme-btn{
     padding: 13px 11px;
     color: #FFFFFF;
@@ -105,11 +157,24 @@ select,
     background-color: #3D4B60;
 }
 
-.main-inner{
-    display: flex;
+/* Colors Scheme */
+
+#first-color{
+    background-color: #F55A5A;
 }
 
+#second-color{
+    background-color: #2B283A;
+}
 
-.main-items{
-    flex: 1 1 auto;
+#third-color{
+    background-color: #FBF3AB;
+}
+
+#fourth-color{
+    background-color: #AAD1B6;
+}
+
+#fifth-color{
+    background-color: #A626D3;
 }
