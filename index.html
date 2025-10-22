@@ -12,17 +12,22 @@
 <body>
     <div class="body-inner">
         <header>
-            <form class="header-inner">
-                <input type="color" id="color" aria-label="Select color" value="#F55A5A">
-                <select id="select-mode" class="select-mode" aria-label="Select color mode">
+            <form id="form" class="header-inner">
+                <input type="color" id="color" name="color" aria-label="color picker" value="#F55A5A">
+                <select id="mode" name="mode" class="select-mode" aria-label="Select color mode">
                         <button class="selected">
                             <selectedcontent></selectedcontent>
                         </button>
                         <option value="monochrome">Monochrome</option>
-                        <option value="mode-1">Mode 1</option>
-                        <option value="mode-2">Mode 2</option>
+                        <option value="monochrome-dark">Monochrome Dark</option>
+                        <option value="monochrome-light">Monochrome Light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic Complement</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
                 </select>
-                <button class="get-scheme-btn">Get color scheme</button>
+                <button type="submit" class="get-scheme-btn">Get color scheme</button>
             </form>
         </header>
         <main>
