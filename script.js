@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
 
     fetchColorScheme(color, mode)
         .then(colors => {
-            // Do something inside .....
+            renderColors(colors)
         })
 
 })
@@ -34,4 +34,20 @@ function fetchColorScheme(color, mode, count = 5){
             console.error(`Error fetching scheme: ${error}`)
             return []
         })
+}
+
+function renderColors(colors){
+    const colorElements = []
+    const descriptionElements = []
+
+    for(let i = 0; i < 5; i++){
+        colorElements.push(document.getElementById(`${['first', 'second', 'third', 'fourth', 'fifth'][i]}-color`))
+        descriptionElements.push(document.getElementById(`hexdec-${[i+1]}`))
+    }
+
+    colors.forEach((color, index)=>{
+        colorElements[index].style.backgroundColor = color
+        descriptionElements[index].textContent = color
+        
+    })
 }
