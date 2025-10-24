@@ -18,14 +18,13 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 100vh;
     background-color: #D5D4D8;
     font-family: "Inter", sans-serif;
+    padding: 20px;
 }
 
 .body-inner{
     width: 550px;
-    height: 550px
 }
 
 .header-inner{
